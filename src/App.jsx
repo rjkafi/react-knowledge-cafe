@@ -1,13 +1,19 @@
 
 import './App.css'
+import Header from './components/Header/Header'
+import Blogs from './components/Blogs/Blogs'
+import Bookmarks from './components/Bookmarks/Bookmarks'
 
 function App() {
 
   return (
     <>
      
-      <h1 className='text-5xl bg-purple-500'>Knowledge react cafe</h1>
-      
+      <Header></Header>
+     <div className='md:flex justify-between'>
+     <Blogs></Blogs>
+     <Bookmarks></Bookmarks>
+     </div>
      
     </>
   )
