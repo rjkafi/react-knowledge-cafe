@@ -14,9 +14,14 @@ const handleAddToBookmark = blog =>{
   const newbookmarks=[...bookmarks,blog];
   setBookmarks(newbookmarks);
 }
-const handleReadingTime = time =>{
+const handleReadingTime = (id,time) =>{
   const newReadingTime=readingTime +time ;
   setReadingTime(newReadingTime);
+  // remove the book mark
+  const remainingBookmarks=bookmarks.filter(bookmark => bookmark.id !==id)
+  setBookmarks(remainingBookmarks);
+ 
+
 }
 
   return (

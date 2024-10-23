@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { BsBookmarks } from "react-icons/bs";
 
 const Blog = ({blog,handleAddToBookmark,handleReadingTime}) => {
-    const {title,cover,author_img,reading_time,posted_date,author,hashtag}=blog;
+    const {id,title,cover,author_img,reading_time,posted_date,author,hashtag}=blog;
     return (
         <div className='border-b mb-10'>
             <img className='w-full' src={cover} alt={`cover picture of the title ${title}`} />
@@ -23,7 +23,7 @@ const Blog = ({blog,handleAddToBookmark,handleReadingTime}) => {
             <div className='mb-4 space-y-3'>
             <h3 className='text-4xl font-bold'>{title}</h3>
             <p><span><a href="">{hashtag}</a></span></p><br />
-            <button onClick={() => handleReadingTime(reading_time)} className='text-purple-500 font-semibold underline'>Mark as read</button>
+            <button onClick={() => handleReadingTime(id,reading_time)} className='text-purple-500 font-semibold underline'>Mark as read</button>
             </div>
            
         </div>
